@@ -8,7 +8,7 @@ public class ThreadIngresso extends Thread {
 	Random gerador = new Random();
 	private int idComprador;
 	private Semaphore espera;
-	int quantIngressos = 100;
+	private static int quantIngressos = 100;
 	int compraIngresso = gerador.nextInt(4) + 1;
 	
 	public ThreadIngresso() {
@@ -18,6 +18,7 @@ public class ThreadIngresso extends Thread {
 	public ThreadIngresso(int idComprador, Semaphore espera) {
 		this.idComprador = idComprador;
 		this.espera = espera;
+		
 	}
 	
 	@Override
